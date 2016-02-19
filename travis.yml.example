@@ -1,5 +1,6 @@
 language: bash
-sudo: false
+sudo: required
+dist: trusty
 os:
   - linux
   - osx
@@ -7,6 +8,9 @@ addons:
   apt:
     packages:
     - shellcheck
+branches:
+  only:
+    - master
 install:
   - ./build/install.sh
 script:

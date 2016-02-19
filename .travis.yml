@@ -1,5 +1,6 @@
 language: bash
-sudo: false
+sudo: required
+dist: trusty
 os:
   - linux
   - osx
