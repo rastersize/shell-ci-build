@@ -1,4 +1,16 @@
 language: bash
+sudo: required
+dist: trusty
+os:
+  - linux
+  - osx
+addons:
+  apt:
+    packages:
+    - shellcheck
+branches:
+  only:
+    - master
 install:
   - ./install.sh
 script:
@@ -6,7 +18,3 @@ script:
   - ./tests/test-custom-check.sh
 notifications:
   email: false
-sudo: required
-os:
-  - linux
-  - osx
